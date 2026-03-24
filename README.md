@@ -268,5 +268,17 @@ To ensure connectivity and functionality, the following tests were performed:
   The project meets its objectives and requirements. All hosts can communicate with each other. Servers in the DMZ are reachable from outside while protected by ACLs. NAT translations are configured correctly, allowing all
 LAN hosts to share a single public IP address.
 
+## Future Improvements
+To enhance this network, the following features could be implemented:
+
+  * Password protection
+      Adding local usernames and secure passwords for privileged EXEC (enable), console, and VTY lines on DMZ_Router and LAN-2_Router.
+      Enforcing password complexity and periodic rotation.
+
+  * Configuration of SSH for remote management
+      Creating and applying local user accounts, generating RSA key pairs, setting a domain name, and enabling SSH v2.
+      Disabling unsecured services (telnet), limiting SSH access with access control lists, and restricting allowed management IPs.
+      Using key-based authentication and shorter SSH session timeouts.
+
 ## License
 This project is licensed under the CC0-1.0 Universal - see the LICENSE file for details.
