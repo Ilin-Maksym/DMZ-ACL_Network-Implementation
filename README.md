@@ -1,8 +1,8 @@
 # DMZ-ACL_Network-Implementation
 
 ## Description
-  This project demonstrates a small network simulated in Cisco Packet Tracer. It shows how to implement a DMZ and ACLs to protect both the internal LAN and DMZ servers. The lab also configures NAT and PAT so all internal hosts
-and servers share a single public IP.
+  This project demonstrates a small network simulated in Cisco Packet Tracer. It shows how to implement a DMZ and ACLs to protect both the internal LAN and DMZ servers. The lab also configures NAT and PAT so all internal
+hosts and servers share a single public IP.
 
 ## Network Diagram
 ![Network Diagram](Diagram.png)
@@ -148,7 +148,7 @@ DMZ_Router(config-ext-nacl)# deny ip any any
 DMZ_Router(config-ext-nacl)# exit
 
 
-DMZ_Router(config)# permit access-list extended LAN-1_IN
+DMZ_Router(config)# ip access-list extended LAN-1_IN
 
 DMZ_Router(config-ext-nacl)# permit tcp any any
 
@@ -159,7 +159,7 @@ DMZ_Router(config-ext-nacl)# deny ip any any
 DMZ_Router(config-ext-nacl)# exit
 
 
-DMZ_Router(config)# permit access-list extended LAN-1_OUT
+DMZ_Router(config)# ip access-list extended LAN-1_OUT
 
 DMZ_Router(config-ext-nacl)# permit tcp any any
 
@@ -256,7 +256,7 @@ LAN-2_Router# copy running-config startup-config
 
 LAN-2_Router# exit
 
-## Test Scenarious
+## Test Scenarios
 To ensure connectivity and functionality, the following tests were performed:
 
   * HTTP/HTTPS Connections: All hosts within both LANs were able to connect to DMZ web-server via HTTP and HTTPS.
